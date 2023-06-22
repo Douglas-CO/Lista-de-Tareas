@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Dia 10</title>
+</head>
+<body>
+    <h1 style="margin: 1cm; text-align: center;">Lista de Tarea</h1>
+    <div class="row" style="margin: 1cm;">
+        <div class="card card-body" style="margin-right: 1cm;" id="principal">
+            <div class="row">
+                <button class="btn btn-success" style="margin: 0.5cm;" onclick="agregar()">Agregar una nueva tarea</button>
+            </div>
+            <table style="margin: 1cm;" id="listaTareas">
+                <tr >
+                    <th>Titulo</th>
+                    <th>Descripcion</th>
+                    <th style="width: 2cm;">Terminado</th>
+                </tr>
+            </table>
+        </div>
+        <div class="card card-body">
+            <h2>Tarea Completadas</h2>
+            <table style="margin: 1cm;" id="TareasCompletadas">
+            </table>
+        </div>
+    </div>
+    <div class="card card-body" style="position: absolute; top: 3cm; left: 20%; height: 5cm; width: 15cm; display: none;" id="agregarBlock">
+        <input id="idTitulo" type="text" class="input-group-text" style="margin: 0.2cm; width: 98%;" placeholder="Titulo de la Tarea">
+        <input id="idDescripcion" type="text" class="input-group-text" style="margin: 0.2cm; width: 98%;" placeholder="Descripcion de la Tarea">
+        <div class="row" style=" position: absolute; top: 3.5cm; right: 1cm;">
+            <button class="btn btn-success" style="margin-left: 1cm;" onclick="agregarTarea()">Agregar</button>
+            <button class="btn btn-danger" style="margin-left: 1cm;" onclick="cancelarTarea()">Cancelar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <style>
+        table, th, td {
+            border:1px solid black;
+        }
+    </style>
+</body>
+</html>
